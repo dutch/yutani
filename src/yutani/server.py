@@ -1,4 +1,3 @@
-import json
 from flask import Flask
 
 app = Flask(__name__)
@@ -9,7 +8,7 @@ def main():
 
 @app.route('/.well-known/terraform.json')
 def terraform():
-	return json.dumps({
+	return {
 		'login.v1': {
 			'client': 'terraform-cli',
 			'grant_types': ['authz_code'],
@@ -17,4 +16,4 @@ def terraform():
 			'token': '/oauth/token',
 		},
 		'tfe.v2.1': '/v2.1',
-	})
+	}
