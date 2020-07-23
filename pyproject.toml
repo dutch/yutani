@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "yutani"
+version = "0.1.0"
+description = ""
+authors = ["dutch <chris@lamberson.online>"]
+license = "GPLv3+"
+readme = "README.md"
+homepage = "https://github.com/dutch/yutani"
+repository = "https://github.com/dutch/yutani"
+keywords = ["terraform"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Flask = "^1.1.2"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+yutani = "yutani.console:main"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
